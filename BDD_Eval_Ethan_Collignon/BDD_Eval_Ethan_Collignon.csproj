@@ -18,4 +18,8 @@
     <Folder Include="Support\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Bwapp\BwappWebDriver.csproj" />
+  </ItemGroup>
+
 </Project>
