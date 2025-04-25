@@ -20,7 +20,7 @@ namespace BDD_Eval_Ethan_Collignon.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Reqnroll", "2.0.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute()]
-    public partial class LoginFeature
+    public partial class LogoutFeature
     {
         
         private global::Reqnroll.ITestRunner testRunner;
@@ -29,9 +29,9 @@ namespace BDD_Eval_Ethan_Collignon.Features
         
         private static string[] featureTags = ((string[])(null));
         
-        private static global::Reqnroll.FeatureInfo featureInfo = new global::Reqnroll.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Login", "A short summary of the feature", global::Reqnroll.ProgrammingLanguage.CSharp, featureTags);
+        private static global::Reqnroll.FeatureInfo featureInfo = new global::Reqnroll.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Logout", "A short summary of the feature", global::Reqnroll.ProgrammingLanguage.CSharp, featureTags);
         
-#line 1 "Login.feature"
+#line 1 "Logout.feature"
 #line hidden
         
         public virtual Microsoft.VisualStudio.TestTools.UnitTesting.TestContext TestContext
@@ -95,13 +95,13 @@ namespace BDD_Eval_Ethan_Collignon.Features
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Connexion à l\'application")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Login")]
-        public async System.Threading.Tasks.Task ConnexionALapplication()
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Déconnexion de l\'application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Logout")]
+        public async System.Threading.Tasks.Task DeconnexionDeLapplication()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Connexion à l\'application", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Déconnexion de l\'application", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 5
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -125,47 +125,21 @@ this.ScenarioInitialize(scenarioInfo);
  await testRunner.WhenAsync("Je clique sur le bouton dont le nom est \"form\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
 #line 10
- await testRunner.ThenAsync("La page actuelle est \"bWAPP - Portal\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
+ await testRunner.GivenAsync("La page actuelle est \"bWAPP - Portal\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-            }
-            await this.ScenarioCleanupAsync();
-        }
-        
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Tentative de connexion à l\'application avec des infos incorrectes")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Login")]
-        public async System.Threading.Tasks.Task TentativeDeConnexionALapplicationAvecDesInfosIncorrectes()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Tentative de connexion à l\'application avec des infos incorrectes", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 11
+ await testRunner.AndAsync("L\'element dont le XPath est \"/html/body/div[1]/table/tbody/tr/td[8]/a\" est présen" +
+                        "t", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
 #line 12
-this.ScenarioInitialize(scenarioInfo);
+ await testRunner.WhenAsync("je clique sur le bouton dont le XPath est \"/html/body/div[1]/table/tbody/tr/td[8]" +
+                        "/a\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-            if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                await this.ScenarioStartAsync();
 #line 13
- await testRunner.GivenAsync("La page actuelle est \"bWAPP - Login\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
+ await testRunner.AndAsync("je confirme le dialogue", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
 #line 14
- await testRunner.WhenAsync("Je remplis l\'input \"login\" avec la valeur \"username\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
-#line hidden
-#line 15
- await testRunner.WhenAsync("Je remplis l\'input \"password\" avec la valeur \"password\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
-#line hidden
-#line 16
- await testRunner.WhenAsync("Je clique sur le bouton dont le nom est \"form\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
-#line hidden
-#line 17
  await testRunner.ThenAsync("La page actuelle est \"bWAPP - Login\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
-#line hidden
-#line 18
- await testRunner.AndAsync("L\'element dont le XPath est \"/html/body/div[2]/font\" existe", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
             await this.ScenarioCleanupAsync();
