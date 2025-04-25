@@ -1,0 +1,14 @@
+﻿Feature: Logout
+
+A short summary of the feature
+
+Scenario: Déconnexion de l'application
+	Given La page actuelle est "bWAPP - Login"
+	When Je remplis l'input "login" avec la valeur "bee"
+	When Je remplis l'input "password" avec la valeur "bug"
+	When Je clique sur le bouton dont le nom est "form"
+	Given La page actuelle est "bWAPP - Portal"
+	And L'element dont le XPath est "/html/body/div[1]/table/tbody/tr/td[8]/a" est présent
+	When je clique sur le bouton dont le XPath est "/html/body/div[1]/table/tbody/tr/td[8]/a"
+	And je confirme le dialogue
+	Then La page actuelle est "bWAPP - Login"
