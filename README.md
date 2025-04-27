@@ -1,6 +1,6 @@
 # BDD_Eval_Ethan_Collignon
 
-## Liste des features testées :
+## Liste des scénariis testées :
 * Login
 	* Réussite
 	* Echec
