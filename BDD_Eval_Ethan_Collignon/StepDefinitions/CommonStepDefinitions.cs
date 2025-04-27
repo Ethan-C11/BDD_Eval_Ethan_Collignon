@@ -2,6 +2,7 @@ using System;
 using Reqnroll;
 using BugzillaWebDriver.ComponentHelper;
 using OpenQA.Selenium;
+using System.Xml.Linq;
 
 namespace BDD_Eval_Ethan_Collignon.StepDefinitions
 {
@@ -11,7 +12,7 @@ namespace BDD_Eval_Ethan_Collignon.StepDefinitions
         [Given("La page actuelle est {string}")]
         public void GivenLaPageActuelleEst(string title)
         {
-            Assert.AreEqual(PageHelper.GetPageTitle(), title);
+            Assert.AreEqual(title, PageHelper.GetPageTitle());
         }
 
         [Given("L'element dont le XPath est {string} est présent")]
@@ -50,10 +51,23 @@ namespace BDD_Eval_Ethan_Collignon.StepDefinitions
             AlertHelper.Dismiss();
         }
 
+        [When("J'attends {int} secondes")]
+        public void WhenJattendsSecondes(int seconds)
+        {
+            Thread.Sleep(seconds*1000);
+        }
+
+        [When("Je change la valeur de la combobox dont le XPath est {string} à {string}")]
+        public void WhenJeChangeLaValeurDeLaComboboxDontLeXPathEstA(string xPath, string value)
+        {
+            ComboBoxHelper.SelectElement(By.XPath(xPath), value);
+        }
+
+
         [Then("La page actuelle est {string}")]
         public void ThenLaPageActuelleEst(string title)
         {
-            Assert.AreEqual(PageHelper.GetPageTitle(), title);
+            Assert.AreEqual(title, PageHelper.GetPageTitle());
         }
 
         [Then("L'element dont le XPath est {string} existe")]
@@ -61,5 +75,14 @@ namespace BDD_Eval_Ethan_Collignon.StepDefinitions
         {
             Assert.IsTrue(GenericHelper.IsElementPresentOnce(By.XPath(xPath)));
         }
+
+        [Then("le contenu de la balise dont le Xpath est {string} est égal à {string}")]
+        public void ThenLeContenuDeLaBaliseDontLeXpathEstEstEgalA(string xPath, string value)
+        {
+            Assert.AreEqual(value, GenericHelper.GetElement(By.XPath(xPath)).Text);
+        }
+
+
+
     }
 }

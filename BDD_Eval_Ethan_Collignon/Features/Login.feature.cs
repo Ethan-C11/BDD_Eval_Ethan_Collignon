@@ -167,6 +167,10 @@ this.ScenarioInitialize(scenarioInfo);
 #line 18
  await testRunner.AndAsync("L\'element dont le XPath est \"/html/body/div[2]/font\" existe", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
+#line 19
+ await testRunner.AndAsync("le contenu de la balise dont le Xpath est \"/html/body/div[2]/font\" est égal à \"In" +
+                        "valid credentials or user not activated!\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
             }
             await this.ScenarioCleanupAsync();
         }

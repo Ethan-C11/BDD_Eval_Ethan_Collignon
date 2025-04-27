@@ -16,3 +16,4 @@ Scenario: Tentative de connexion à l'application avec des infos incorrectes
 	When Je clique sur le bouton dont le nom est "form"
 	Then La page actuelle est "bWAPP - Login"
 	And L'element dont le XPath est "/html/body/div[2]/font" existe
+	And le contenu de la balise dont le Xpath est "/html/body/div[2]/font" est égal à "Invalid credentials or user not activated!" 

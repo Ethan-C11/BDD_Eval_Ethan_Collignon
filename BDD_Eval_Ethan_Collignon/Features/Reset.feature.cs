@@ -20,7 +20,7 @@ namespace BDD_Eval_Ethan_Collignon.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Reqnroll", "2.0.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute()]
-    public partial class LogoutFeature
+    public partial class ResetFeature
     {
         
         private global::Reqnroll.ITestRunner testRunner;
@@ -29,9 +29,9 @@ namespace BDD_Eval_Ethan_Collignon.Features
         
         private static string[] featureTags = ((string[])(null));
         
-        private static global::Reqnroll.FeatureInfo featureInfo = new global::Reqnroll.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Logout", "A short summary of the feature", global::Reqnroll.ProgrammingLanguage.CSharp, featureTags);
+        private static global::Reqnroll.FeatureInfo featureInfo = new global::Reqnroll.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Reset", "A short summary of the feature", global::Reqnroll.ProgrammingLanguage.CSharp, featureTags);
         
-#line 1 "Logout.feature"
+#line 1 "Reset.feature"
 #line hidden
         
         public virtual Microsoft.VisualStudio.TestTools.UnitTesting.TestContext TestContext
@@ -95,14 +95,16 @@ namespace BDD_Eval_Ethan_Collignon.Features
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Déconnexion de l\'application")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Logout")]
-        public async System.Threading.Tasks.Task DeconnexionDeLapplication()
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Je reset l\'application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Reset")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("tag1")]
+        public async System.Threading.Tasks.Task JeResetLapplication()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "tag1"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Déconnexion de l\'application", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 5
+            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Je reset l\'application", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 6
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -112,52 +114,52 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 6
- await testRunner.GivenAsync("La page actuelle est \"bWAPP - Login\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
-#line hidden
 #line 7
- await testRunner.WhenAsync("Je remplis l\'input \"login\" avec la valeur \"bee\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+await testRunner.GivenAsync("La page actuelle est \"bWAPP - Login\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
 #line 8
- await testRunner.WhenAsync("Je remplis l\'input \"password\" avec la valeur \"bug\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+ await testRunner.WhenAsync("Je remplis l\'input \"login\" avec la valeur \"bee\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
 #line 9
- await testRunner.WhenAsync("Je clique sur le bouton dont le nom est \"form\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+ await testRunner.WhenAsync("Je remplis l\'input \"password\" avec la valeur \"bug\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
 #line 10
- await testRunner.GivenAsync("La page actuelle est \"bWAPP - Portal\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
+ await testRunner.WhenAsync("Je clique sur le bouton dont le nom est \"form\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
 #line 11
- await testRunner.AndAsync("L\'element dont le XPath est \"/html/body/div[1]/table/tbody/tr/td[8]/a\" est présen" +
-                        "t", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+ await testRunner.GivenAsync("La page actuelle est \"bWAPP - Portal\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
 #line 12
- await testRunner.WhenAsync("je clique sur le bouton dont le XPath est \"/html/body/div[1]/table/tbody/tr/td[8]" +
-                        "/a\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+ await testRunner.AndAsync("L\'element dont le XPath est \"/html/body/div[1]/table/tbody/tr/td[2]/a\" est présen" +
+                        "t", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
 #line 13
- await testRunner.AndAsync("je confirme le dialogue", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+ await testRunner.WhenAsync("je clique sur le bouton dont le XPath est \"/html/body/div[1]/table/tbody/tr/td[2]" +
+                        "/a\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
 #line 14
- await testRunner.AndAsync("J\'attends 1 secondes", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+ await testRunner.AndAsync("je confirme le dialogue", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
 #line 15
- await testRunner.ThenAsync("La page actuelle est \"bWAPP - Login\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
+ await testRunner.AndAsync("J\'attends 1 secondes", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+#line 16
+ await testRunner.ThenAsync("La page actuelle est \"bWAPP - Reset\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
             }
             await this.ScenarioCleanupAsync();
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Déconnexion de l\'application mais je refuse le dialogue")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Logout")]
-        public async System.Threading.Tasks.Task DeconnexionDeLapplicationMaisJeRefuseLeDialogue()
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Je reset l\'application mais refuse le dialogue")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Reset")]
+        public async System.Threading.Tasks.Task JeResetLapplicationMaisRefuseLeDialogue()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Déconnexion de l\'application mais je refuse le dialogue", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 17
- this.ScenarioInitialize(scenarioInfo);
+            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Je reset l\'application mais refuse le dialogue", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 18
+this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
             {
@@ -166,36 +168,36 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 18
- await testRunner.GivenAsync("La page actuelle est \"bWAPP - Login\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
-#line hidden
 #line 19
- await testRunner.WhenAsync("Je remplis l\'input \"login\" avec la valeur \"bee\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+await testRunner.GivenAsync("La page actuelle est \"bWAPP - Login\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
 #line 20
- await testRunner.WhenAsync("Je remplis l\'input \"password\" avec la valeur \"bug\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+ await testRunner.WhenAsync("Je remplis l\'input \"login\" avec la valeur \"bee\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
 #line 21
- await testRunner.WhenAsync("Je clique sur le bouton dont le nom est \"form\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+ await testRunner.WhenAsync("Je remplis l\'input \"password\" avec la valeur \"bug\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
 #line 22
- await testRunner.GivenAsync("La page actuelle est \"bWAPP - Portal\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
+ await testRunner.WhenAsync("Je clique sur le bouton dont le nom est \"form\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
 #line 23
- await testRunner.AndAsync("L\'element dont le XPath est \"/html/body/div[1]/table/tbody/tr/td[8]/a\" est présen" +
-                        "t", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+ await testRunner.GivenAsync("La page actuelle est \"bWAPP - Portal\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
 #line 24
- await testRunner.WhenAsync("je clique sur le bouton dont le XPath est \"/html/body/div[1]/table/tbody/tr/td[8]" +
-                        "/a\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+ await testRunner.AndAsync("L\'element dont le XPath est \"/html/body/div[1]/table/tbody/tr/td[2]/a\" est présen" +
+                        "t", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
 #line 25
- await testRunner.AndAsync("je refuse le dialogue", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+ await testRunner.WhenAsync("je clique sur le bouton dont le XPath est \"/html/body/div[1]/table/tbody/tr/td[2]" +
+                        "/a\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
 #line 26
- await testRunner.AndAsync("J\'attends 1 secondes", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+ await testRunner.AndAsync("je refuse le dialogue", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
 #line 27
+ await testRunner.AndAsync("J\'attends 1 secondes", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+#line 28
  await testRunner.ThenAsync("La page actuelle est \"bWAPP - Portal\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
             }
