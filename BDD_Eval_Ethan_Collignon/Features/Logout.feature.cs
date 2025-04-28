@@ -94,6 +94,35 @@ namespace BDD_Eval_Ethan_Collignon.Features
             await testRunner.CollectScenarioErrorsAsync();
         }
         
+        public virtual async System.Threading.Tasks.Task FeatureBackgroundAsync()
+        {
+#line 6
+#line hidden
+#line 7
+ await testRunner.GivenAsync("La page actuelle est \"bWAPP - Login\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
+#line hidden
+#line 8
+ await testRunner.WhenAsync("Je remplis l\'input \"login\" avec la valeur \"bee\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+#line hidden
+#line 9
+ await testRunner.WhenAsync("Je remplis l\'input \"password\" avec la valeur \"bug\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+#line hidden
+#line 10
+ await testRunner.WhenAsync("Je clique sur le bouton dont le nom est \"form\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+#line hidden
+#line 11
+ await testRunner.GivenAsync("La page actuelle est \"bWAPP - Portal\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
+#line hidden
+#line 12
+ await testRunner.AndAsync("L\'element dont le XPath est \"/html/body/div[1]/table/tbody/tr/td[8]/a\" est présen" +
+                    "t", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+#line 13
+ await testRunner.WhenAsync("je clique sur le bouton dont le XPath est \"/html/body/div[1]/table/tbody/tr/td[8]" +
+                    "/a\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+#line hidden
+        }
+        
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Déconnexion de l\'application")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Logout")]
@@ -102,7 +131,7 @@ namespace BDD_Eval_Ethan_Collignon.Features
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Déconnexion de l\'application", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 5
+#line 15
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -113,35 +142,15 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 await this.ScenarioStartAsync();
 #line 6
- await testRunner.GivenAsync("La page actuelle est \"bWAPP - Login\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
+await this.FeatureBackgroundAsync();
 #line hidden
-#line 7
- await testRunner.WhenAsync("Je remplis l\'input \"login\" avec la valeur \"bee\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+#line 16
+ await testRunner.WhenAsync("je confirme le dialogue", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 8
- await testRunner.WhenAsync("Je remplis l\'input \"password\" avec la valeur \"bug\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
-#line hidden
-#line 9
- await testRunner.WhenAsync("Je clique sur le bouton dont le nom est \"form\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
-#line hidden
-#line 10
- await testRunner.GivenAsync("La page actuelle est \"bWAPP - Portal\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
-#line hidden
-#line 11
- await testRunner.AndAsync("L\'element dont le XPath est \"/html/body/div[1]/table/tbody/tr/td[8]/a\" est présen" +
-                        "t", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
-#line hidden
-#line 12
- await testRunner.WhenAsync("je clique sur le bouton dont le XPath est \"/html/body/div[1]/table/tbody/tr/td[8]" +
-                        "/a\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
-#line hidden
-#line 13
- await testRunner.AndAsync("je confirme le dialogue", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
-#line hidden
-#line 14
+#line 17
  await testRunner.AndAsync("J\'attends 1 secondes", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 15
+#line 18
  await testRunner.ThenAsync("La page actuelle est \"bWAPP - Login\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
             }
@@ -156,8 +165,8 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Déconnexion de l\'application mais je refuse le dialogue", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 17
- this.ScenarioInitialize(scenarioInfo);
+#line 20
+this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
             {
@@ -166,36 +175,16 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 18
- await testRunner.GivenAsync("La page actuelle est \"bWAPP - Login\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
-#line hidden
-#line 19
- await testRunner.WhenAsync("Je remplis l\'input \"login\" avec la valeur \"bee\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
-#line hidden
-#line 20
- await testRunner.WhenAsync("Je remplis l\'input \"password\" avec la valeur \"bug\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+#line 6
+await this.FeatureBackgroundAsync();
 #line hidden
 #line 21
- await testRunner.WhenAsync("Je clique sur le bouton dont le nom est \"form\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+ await testRunner.WhenAsync("je refuse le dialogue", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
 #line 22
- await testRunner.GivenAsync("La page actuelle est \"bWAPP - Portal\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
-#line hidden
-#line 23
- await testRunner.AndAsync("L\'element dont le XPath est \"/html/body/div[1]/table/tbody/tr/td[8]/a\" est présen" +
-                        "t", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
-#line hidden
-#line 24
- await testRunner.WhenAsync("je clique sur le bouton dont le XPath est \"/html/body/div[1]/table/tbody/tr/td[8]" +
-                        "/a\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
-#line hidden
-#line 25
- await testRunner.AndAsync("je refuse le dialogue", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
-#line hidden
-#line 26
  await testRunner.AndAsync("J\'attends 1 secondes", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 27
+#line 23
  await testRunner.ThenAsync("La page actuelle est \"bWAPP - Portal\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
             }

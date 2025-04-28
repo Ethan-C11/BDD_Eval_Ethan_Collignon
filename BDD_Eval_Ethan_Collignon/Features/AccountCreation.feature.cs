@@ -94,6 +94,23 @@ namespace BDD_Eval_Ethan_Collignon.Features
             await testRunner.CollectScenarioErrorsAsync();
         }
         
+        public virtual async System.Threading.Tasks.Task FeatureBackgroundAsync()
+        {
+#line 5
+#line hidden
+#line 6
+ await testRunner.GivenAsync("La page actuelle est \"bWAPP - Login\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
+#line hidden
+#line 7
+ await testRunner.AndAsync("L\'element dont le XPath est \"/html/body/div[1]/table/tbody/tr/td[2]/a\" est présen" +
+                    "t", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+#line 8
+ await testRunner.WhenAsync("je clique sur le bouton dont le XPath est \"/html/body/div[1]/table/tbody/tr/td[2]" +
+                    "/a\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+#line hidden
+        }
+        
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Je crée un nouvel utilisateur")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "AccountCreation")]
@@ -102,7 +119,7 @@ namespace BDD_Eval_Ethan_Collignon.Features
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Je crée un nouvel utilisateur", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 5
+#line 10
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -112,39 +129,31 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 6
- await testRunner.GivenAsync("La page actuelle est \"bWAPP - Login\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
-#line hidden
-#line 7
- await testRunner.AndAsync("L\'element dont le XPath est \"/html/body/div[1]/table/tbody/tr/td[2]/a\" est présen" +
-                        "t", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
-#line hidden
-#line 8
- await testRunner.WhenAsync("je clique sur le bouton dont le XPath est \"/html/body/div[1]/table/tbody/tr/td[2]" +
-                        "/a\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
-#line hidden
-#line 9
- await testRunner.AndAsync("Je remplis l\'input \"login\" avec un username aléatoire", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
-#line hidden
-#line 10
- await testRunner.AndAsync("Je remplis l\'input \"password\" avec la valeur \"password\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line 5
+await this.FeatureBackgroundAsync();
 #line hidden
 #line 11
- await testRunner.AndAsync("Je remplis l\'input \"password_conf\" avec la valeur \"password\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+ await testRunner.WhenAsync("Je remplis l\'input \"login\" avec un username aléatoire", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
 #line 12
- await testRunner.AndAsync("Je remplis l\'input \"email\" avec un email aléatoire", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+ await testRunner.AndAsync("Je remplis l\'input \"password\" avec la valeur \"password\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
 #line 13
- await testRunner.AndAsync("Je remplis l\'input \"secret\" avec la valeur \"secret\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+ await testRunner.AndAsync("Je remplis l\'input \"password_conf\" avec la valeur \"password\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
 #line 14
- await testRunner.AndAsync("Je clique sur le bouton dont le nom est \"action\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+ await testRunner.AndAsync("Je remplis l\'input \"email\" avec un email aléatoire", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
 #line 15
- await testRunner.ThenAsync("L\'element dont le XPath est \"/html/body/div[2]/font\" existe", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
+ await testRunner.AndAsync("Je remplis l\'input \"secret\" avec la valeur \"secret\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
 #line 16
+ await testRunner.AndAsync("Je clique sur le bouton dont le nom est \"action\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+#line 17
+ await testRunner.ThenAsync("L\'element dont le XPath est \"/html/body/div[2]/font\" existe", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
+#line hidden
+#line 18
  await testRunner.AndAsync("le contenu de la balise dont le Xpath est \"/html/body/div[2]/font\" est égal à \"Us" +
                         "er successfully created!\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
@@ -160,7 +169,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Je crée un nouvel utilisateur en utilisant un login déjà utilisé", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 18
+#line 20
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -170,39 +179,31 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 19
- await testRunner.GivenAsync("La page actuelle est \"bWAPP - Login\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
-#line hidden
-#line 20
- await testRunner.AndAsync("L\'element dont le XPath est \"/html/body/div[1]/table/tbody/tr/td[2]/a\" est présen" +
-                        "t", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line 5
+await this.FeatureBackgroundAsync();
 #line hidden
 #line 21
- await testRunner.WhenAsync("je clique sur le bouton dont le XPath est \"/html/body/div[1]/table/tbody/tr/td[2]" +
-                        "/a\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+ await testRunner.WhenAsync("Je remplis l\'input \"login\" avec la valeur \"bee\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
 #line 22
- await testRunner.AndAsync("Je remplis l\'input \"login\" avec la valeur \"bee\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
-#line hidden
-#line 23
  await testRunner.AndAsync("Je remplis l\'input \"password\" avec la valeur \"password\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 24
+#line 23
  await testRunner.AndAsync("Je remplis l\'input \"password_conf\" avec la valeur \"password\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 25
+#line 24
  await testRunner.AndAsync("Je remplis l\'input \"email\" avec la valeur \"bee@gmail.com\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 26
+#line 25
  await testRunner.AndAsync("Je remplis l\'input \"secret\" avec la valeur \"secret\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 27
+#line 26
  await testRunner.AndAsync("Je clique sur le bouton dont le nom est \"action\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 28
+#line 27
  await testRunner.ThenAsync("L\'element dont le XPath est \"/html/body/div[2]/font\" existe", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 29
+#line 28
  await testRunner.AndAsync("le contenu de la balise dont le Xpath est \"/html/body/div[2]/font\" est égal à \"Th" +
                         "e login or e-mail already exists!\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
@@ -218,7 +219,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Je crée un nouvel utilisateur avec un email invalide", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 31
+#line 30
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -228,39 +229,31 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
+#line 5
+await this.FeatureBackgroundAsync();
+#line hidden
+#line 31
+ await testRunner.WhenAsync("Je remplis l\'input \"login\" avec un username aléatoire", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+#line hidden
 #line 32
- await testRunner.GivenAsync("La page actuelle est \"bWAPP - Login\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
-#line hidden
-#line 33
- await testRunner.AndAsync("L\'element dont le XPath est \"/html/body/div[1]/table/tbody/tr/td[2]/a\" est présen" +
-                        "t", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
-#line hidden
-#line 34
- await testRunner.WhenAsync("je clique sur le bouton dont le XPath est \"/html/body/div[1]/table/tbody/tr/td[2]" +
-                        "/a\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
-#line hidden
-#line 35
- await testRunner.AndAsync("Je remplis l\'input \"login\" avec un username aléatoire", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
-#line hidden
-#line 36
  await testRunner.AndAsync("Je remplis l\'input \"password\" avec la valeur \"password\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 37
+#line 33
  await testRunner.AndAsync("Je remplis l\'input \"password_conf\" avec la valeur \"password\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 38
+#line 34
  await testRunner.AndAsync("Je remplis l\'input \"email\" avec la valeur \"invalidemail\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 39
+#line 35
  await testRunner.AndAsync("Je remplis l\'input \"secret\" avec la valeur \"secret\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 40
+#line 36
  await testRunner.AndAsync("Je clique sur le bouton dont le nom est \"action\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 41
+#line 37
  await testRunner.ThenAsync("L\'element dont le XPath est \"/html/body/div[2]/font\" existe", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 42
+#line 38
  await testRunner.AndAsync("le contenu de la balise dont le Xpath est \"/html/body/div[2]/font\" est égal à \"Pl" +
                         "ease enter a valid e-mail address!\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
@@ -276,7 +269,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Je crée un nouvel utilisateur avec un username invalide", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 44
+#line 40
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -286,41 +279,33 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 45
- await testRunner.GivenAsync("La page actuelle est \"bWAPP - Login\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
+#line 5
+await this.FeatureBackgroundAsync();
 #line hidden
-#line 46
- await testRunner.AndAsync("L\'element dont le XPath est \"/html/body/div[1]/table/tbody/tr/td[2]/a\" est présen" +
-                        "t", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line 41
+ await testRunner.WhenAsync("Je remplis l\'input \"login\" avec la valeur \"i\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 47
- await testRunner.WhenAsync("je clique sur le bouton dont le XPath est \"/html/body/div[1]/table/tbody/tr/td[2]" +
-                        "/a\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
-#line hidden
-#line 48
- await testRunner.AndAsync("Je remplis l\'input \"login\" avec la valeur \"i\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
-#line hidden
-#line 49
+#line 42
  await testRunner.AndAsync("Je remplis l\'input \"password\" avec la valeur \"password\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 50
+#line 43
  await testRunner.AndAsync("Je remplis l\'input \"password_conf\" avec la valeur \"password\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 51
+#line 44
  await testRunner.AndAsync("Je remplis l\'input \"email\" avec un email aléatoire", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 52
+#line 45
  await testRunner.AndAsync("Je remplis l\'input \"secret\" avec la valeur \"secret\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 53
+#line 46
  await testRunner.AndAsync("Je clique sur le bouton dont le nom est \"action\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 54
+#line 47
  await testRunner.ThenAsync("L\'element dont le XPath est \"/html/body/div[2]/font\" existe", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 55
+#line 48
  await testRunner.AndAsync("le contenu de la balise dont le Xpath est \"/html/body/div[2]/font\" est égal à \"Pl" +
-                        "ease enter a valid e-mail address!\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+                        "ease choose a valid login name!\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
             await this.ScenarioCleanupAsync();
@@ -334,7 +319,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Je crée un nouvel utilisateur avec des mots de passe ne correspondant pas", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 57
+#line 50
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -344,39 +329,31 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 58
- await testRunner.GivenAsync("La page actuelle est \"bWAPP - Login\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
+#line 5
+await this.FeatureBackgroundAsync();
 #line hidden
-#line 59
- await testRunner.AndAsync("L\'element dont le XPath est \"/html/body/div[1]/table/tbody/tr/td[2]/a\" est présen" +
-                        "t", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line 51
+ await testRunner.WhenAsync("Je remplis l\'input \"login\" avec un username aléatoire", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 60
- await testRunner.WhenAsync("je clique sur le bouton dont le XPath est \"/html/body/div[1]/table/tbody/tr/td[2]" +
-                        "/a\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
-#line hidden
-#line 61
- await testRunner.AndAsync("Je remplis l\'input \"login\" avec un username aléatoire", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
-#line hidden
-#line 62
+#line 52
  await testRunner.AndAsync("Je remplis l\'input \"password\" avec la valeur \"password\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 63
+#line 53
  await testRunner.AndAsync("Je remplis l\'input \"password_conf\" avec la valeur \"differentpassword\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 64
+#line 54
  await testRunner.AndAsync("Je remplis l\'input \"email\" avec un email aléatoire", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 65
+#line 55
  await testRunner.AndAsync("Je remplis l\'input \"secret\" avec la valeur \"secret\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 66
+#line 56
  await testRunner.AndAsync("Je clique sur le bouton dont le nom est \"action\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 67
+#line 57
  await testRunner.ThenAsync("L\'element dont le XPath est \"/html/body/div[2]/font\" existe", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 68
+#line 58
  await testRunner.AndAsync("le contenu de la balise dont le Xpath est \"/html/body/div[2]/font\" est égal à \"Th" +
                         "e passwords don\'t match!\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
@@ -392,7 +369,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Je crée un nouvel utilisateur sans remplir les champs", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 70
+#line 60
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -402,24 +379,16 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 71
- await testRunner.GivenAsync("La page actuelle est \"bWAPP - Login\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
+#line 5
+await this.FeatureBackgroundAsync();
 #line hidden
-#line 72
- await testRunner.AndAsync("L\'element dont le XPath est \"/html/body/div[1]/table/tbody/tr/td[2]/a\" est présen" +
-                        "t", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line 61
+ await testRunner.WhenAsync("Je clique sur le bouton dont le nom est \"action\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 73
- await testRunner.WhenAsync("je clique sur le bouton dont le XPath est \"/html/body/div[1]/table/tbody/tr/td[2]" +
-                        "/a\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
-#line hidden
-#line 74
- await testRunner.AndAsync("Je clique sur le bouton dont le nom est \"action\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
-#line hidden
-#line 75
+#line 62
  await testRunner.ThenAsync("L\'element dont le XPath est \"/html/body/div[2]/font\" existe", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 76
+#line 63
  await testRunner.AndAsync("le contenu de la balise dont le Xpath est \"/html/body/div[2]/font\" est égal à \"Pl" +
                         "ease enter all the fields!\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden

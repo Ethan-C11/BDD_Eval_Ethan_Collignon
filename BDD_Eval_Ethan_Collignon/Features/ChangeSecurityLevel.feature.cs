@@ -94,24 +94,10 @@ namespace BDD_Eval_Ethan_Collignon.Features
             await testRunner.CollectScenarioErrorsAsync();
         }
         
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Je change le niveau de sécurité depuis la page Set Security Level")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "ChangeSecurityLevel")]
-        public async System.Threading.Tasks.Task JeChangeLeNiveauDeSecuriteDepuisLaPageSetSecurityLevel()
+        public virtual async System.Threading.Tasks.Task FeatureBackgroundAsync()
         {
-            string[] tagsOfScenario = ((string[])(null));
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Je change le niveau de sécurité depuis la page Set Security Level", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 5
-this.ScenarioInitialize(scenarioInfo);
 #line hidden
-            if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                await this.ScenarioStartAsync();
 #line 6
  await testRunner.GivenAsync("La page actuelle est \"bWAPP - Login\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
@@ -127,25 +113,48 @@ this.ScenarioInitialize(scenarioInfo);
 #line 10
  await testRunner.GivenAsync("La page actuelle est \"bWAPP - Portal\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 11
- await testRunner.AndAsync("L\'element dont le XPath est \"/html/body/div[1]/table/tbody/tr/td[4]/a\" est présen" +
-                        "t", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
-#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Je change le niveau de sécurité depuis la page Set Security Level")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "ChangeSecurityLevel")]
+        public async System.Threading.Tasks.Task JeChangeLeNiveauDeSecuriteDepuisLaPageSetSecurityLevel()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Je change le niveau de sécurité depuis la page Set Security Level", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 12
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                await this.ScenarioStartAsync();
+#line 5
+await this.FeatureBackgroundAsync();
+#line hidden
+#line 13
+ await testRunner.GivenAsync("L\'element dont le XPath est \"/html/body/div[1]/table/tbody/tr/td[4]/a\" est présen" +
+                        "t", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
+#line hidden
+#line 14
  await testRunner.WhenAsync("je clique sur le bouton dont le XPath est \"/html/body/div[1]/table/tbody/tr/td[4]" +
                         "/a\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 13
+#line 15
  await testRunner.GivenAsync("La page actuelle est \"bWAPP - Set Security Level\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 14
+#line 16
  await testRunner.WhenAsync("Je change la valeur de la combobox dont le XPath est \"/html/body/div[2]/form/p/se" +
                         "lect\" à \"2\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 15
+#line 17
  await testRunner.AndAsync("Je clique sur le bouton dont le nom est \"form\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 16
+#line 18
  await testRunner.ThenAsync("le contenu de la balise dont le Xpath est \"/html/body/div[2]/p/b\" est égal à \"hig" +
                         "h\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
@@ -161,7 +170,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Je change le niveau de sécurité depuis le formulaire de l\'entête", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 18
+#line 20
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -171,29 +180,17 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 19
- await testRunner.GivenAsync("La page actuelle est \"bWAPP - Login\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
-#line hidden
-#line 20
- await testRunner.WhenAsync("Je remplis l\'input \"login\" avec la valeur \"bee\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+#line 5
+await this.FeatureBackgroundAsync();
 #line hidden
 #line 21
- await testRunner.WhenAsync("Je remplis l\'input \"password\" avec la valeur \"bug\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
-#line hidden
-#line 22
- await testRunner.WhenAsync("Je clique sur le bouton dont le nom est \"form\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
-#line hidden
-#line 23
- await testRunner.GivenAsync("La page actuelle est \"bWAPP - Portal\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
-#line hidden
-#line 24
  await testRunner.WhenAsync("Je change la valeur de la combobox dont le XPath est \"/html/body/div[7]/form/sele" +
                         "ct\" à \"0\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 25
+#line 22
  await testRunner.AndAsync("Je clique sur le bouton dont le nom est \"form_security_level\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 26
+#line 23
  await testRunner.ThenAsync("le contenu de la balise dont le Xpath est \"/html/body/div[7]/form/font/b\" est éga" +
                         "l à \"low\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden

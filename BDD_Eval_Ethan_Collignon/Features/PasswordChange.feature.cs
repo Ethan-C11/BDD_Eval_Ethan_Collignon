@@ -94,24 +94,10 @@ namespace BDD_Eval_Ethan_Collignon.Features
             await testRunner.CollectScenarioErrorsAsync();
         }
         
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Changement de mot de passe")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "PasswordChange")]
-        public async System.Threading.Tasks.Task ChangementDeMotDePasse()
+        public virtual async System.Threading.Tasks.Task FeatureBackgroundAsync()
         {
-            string[] tagsOfScenario = ((string[])(null));
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Changement de mot de passe", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 3
-this.ScenarioInitialize(scenarioInfo);
 #line hidden
-            if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                await this.ScenarioStartAsync();
 #line 4
  await testRunner.GivenAsync("La page actuelle est \"bWAPP - Login\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
@@ -129,31 +115,54 @@ this.ScenarioInitialize(scenarioInfo);
 #line hidden
 #line 9
  await testRunner.AndAsync("L\'element dont le XPath est \"/html/body/div[1]/table/tbody/tr/td[2]/a\" est présen" +
-                        "t", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+                    "t", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
 #line 10
  await testRunner.WhenAsync("je clique sur le bouton dont le XPath est \"/html/body/div[1]/table/tbody/tr/td[2]" +
-                        "/a\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+                    "/a\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
 #line 11
  await testRunner.GivenAsync("La page actuelle est \"bWAPP - Change Password\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 12
- await testRunner.WhenAsync("Je remplis l\'input \"password_curr\" avec la valeur \"bug\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
-#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Changement de mot de passe")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "PasswordChange")]
+        public async System.Threading.Tasks.Task ChangementDeMotDePasse()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Changement de mot de passe", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 13
- await testRunner.AndAsync("Je remplis l\'input \"password_new\" avec la valeur \"bugnew\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                await this.ScenarioStartAsync();
+#line 3
+await this.FeatureBackgroundAsync();
 #line hidden
 #line 14
- await testRunner.AndAsync("Je remplis l\'input \"password_conf\" avec la valeur \"bugnew\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+ await testRunner.WhenAsync("Je remplis l\'input \"password_curr\" avec la valeur \"bug\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
 #line 15
- await testRunner.AndAsync("Je clique sur le bouton dont le nom est \"action\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+ await testRunner.AndAsync("Je remplis l\'input \"password_new\" avec la valeur \"bugnew\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
 #line 16
- await testRunner.ThenAsync("L\'element dont le XPath est \"/html/body/div[2]/font\" existe", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
+ await testRunner.AndAsync("Je remplis l\'input \"password_conf\" avec la valeur \"bugnew\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
 #line 17
+ await testRunner.AndAsync("Je clique sur le bouton dont le nom est \"action\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+#line 18
+ await testRunner.ThenAsync("L\'element dont le XPath est \"/html/body/div[2]/font\" existe", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
+#line hidden
+#line 19
  await testRunner.AndAsync("le contenu de la balise dont le Xpath est \"/html/body/div[2]/font\" est égal à \"Th" +
                         "e password has been changed!\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
@@ -169,7 +178,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Je remet le mot de passe initial", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 19
+#line 21
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -179,48 +188,25 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 20
- await testRunner.GivenAsync("La page actuelle est \"bWAPP - Login\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
-#line hidden
-#line 21
- await testRunner.WhenAsync("Je remplis l\'input \"login\" avec la valeur \"bee\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+#line 3
+await this.FeatureBackgroundAsync();
 #line hidden
 #line 22
- await testRunner.WhenAsync("Je remplis l\'input \"password\" avec la valeur \"bugnew\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
-#line hidden
-#line 23
- await testRunner.WhenAsync("Je clique sur le bouton dont le nom est \"form\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
-#line hidden
-#line 24
- await testRunner.GivenAsync("La page actuelle est \"bWAPP - Portal\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
-#line hidden
-#line 25
- await testRunner.AndAsync("L\'element dont le XPath est \"/html/body/div[1]/table/tbody/tr/td[2]/a\" est présen" +
-                        "t", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
-#line hidden
-#line 26
- await testRunner.WhenAsync("je clique sur le bouton dont le XPath est \"/html/body/div[1]/table/tbody/tr/td[2]" +
-                        "/a\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
-#line hidden
-#line 27
- await testRunner.GivenAsync("La page actuelle est \"bWAPP - Change Password\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
-#line hidden
-#line 28
  await testRunner.WhenAsync("Je remplis l\'input \"password_curr\" avec la valeur \"bugnew\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 29
+#line 23
  await testRunner.AndAsync("Je remplis l\'input \"password_new\" avec la valeur \"bug\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 30
+#line 24
  await testRunner.AndAsync("Je remplis l\'input \"password_conf\" avec la valeur \"bug\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 31
+#line 25
  await testRunner.AndAsync("Je clique sur le bouton dont le nom est \"action\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 32
+#line 26
  await testRunner.ThenAsync("L\'element dont le XPath est \"/html/body/div[2]/font\" existe", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 33
+#line 27
  await testRunner.AndAsync("le contenu de la balise dont le Xpath est \"/html/body/div[2]/font\" est égal à \"Th" +
                         "e password has been changed!\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
@@ -238,7 +224,7 @@ this.ScenarioInitialize(scenarioInfo);
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Changement de mot de passe où la confirmation de mot de passe ne correspond pas a" +
                     "u nouveau mot de passe", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 35
+#line 29
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -248,48 +234,25 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 36
- await testRunner.GivenAsync("La page actuelle est \"bWAPP - Login\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
+#line 3
+await this.FeatureBackgroundAsync();
 #line hidden
-#line 37
- await testRunner.WhenAsync("Je remplis l\'input \"login\" avec la valeur \"bee\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
-#line hidden
-#line 38
- await testRunner.WhenAsync("Je remplis l\'input \"password\" avec la valeur \"bug\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
-#line hidden
-#line 39
- await testRunner.WhenAsync("Je clique sur le bouton dont le nom est \"form\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
-#line hidden
-#line 40
- await testRunner.GivenAsync("La page actuelle est \"bWAPP - Portal\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
-#line hidden
-#line 41
- await testRunner.AndAsync("L\'element dont le XPath est \"/html/body/div[1]/table/tbody/tr/td[2]/a\" est présen" +
-                        "t", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
-#line hidden
-#line 42
- await testRunner.WhenAsync("je clique sur le bouton dont le XPath est \"/html/body/div[1]/table/tbody/tr/td[2]" +
-                        "/a\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
-#line hidden
-#line 43
- await testRunner.GivenAsync("La page actuelle est \"bWAPP - Change Password\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
-#line hidden
-#line 44
+#line 30
  await testRunner.WhenAsync("Je remplis l\'input \"password_curr\" avec la valeur \"bug\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 45
+#line 31
  await testRunner.AndAsync("Je remplis l\'input \"password_new\" avec la valeur \"bugnew\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 46
+#line 32
  await testRunner.AndAsync("Je remplis l\'input \"password_conf\" avec la valeur \"differentbug\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 47
+#line 33
  await testRunner.AndAsync("Je clique sur le bouton dont le nom est \"action\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 48
+#line 34
  await testRunner.ThenAsync("L\'element dont le XPath est \"/html/body/div[2]/font\" existe", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 49
+#line 35
  await testRunner.AndAsync("le contenu de la balise dont le Xpath est \"/html/body/div[2]/font\" est égal à \"Th" +
                         "e passwords don\'t match!\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
@@ -305,7 +268,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Changement de mot de passe où le mot de passe actuel est incorrect", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 51
+#line 37
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -315,48 +278,25 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 52
- await testRunner.GivenAsync("La page actuelle est \"bWAPP - Login\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
+#line 3
+await this.FeatureBackgroundAsync();
 #line hidden
-#line 53
- await testRunner.WhenAsync("Je remplis l\'input \"login\" avec la valeur \"bee\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
-#line hidden
-#line 54
- await testRunner.WhenAsync("Je remplis l\'input \"password\" avec la valeur \"bug\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
-#line hidden
-#line 55
- await testRunner.WhenAsync("Je clique sur le bouton dont le nom est \"form\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
-#line hidden
-#line 56
- await testRunner.GivenAsync("La page actuelle est \"bWAPP - Portal\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
-#line hidden
-#line 57
- await testRunner.AndAsync("L\'element dont le XPath est \"/html/body/div[1]/table/tbody/tr/td[2]/a\" est présen" +
-                        "t", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
-#line hidden
-#line 58
- await testRunner.WhenAsync("je clique sur le bouton dont le XPath est \"/html/body/div[1]/table/tbody/tr/td[2]" +
-                        "/a\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
-#line hidden
-#line 59
- await testRunner.GivenAsync("La page actuelle est \"bWAPP - Change Password\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
-#line hidden
-#line 60
+#line 38
  await testRunner.WhenAsync("Je remplis l\'input \"password_curr\" avec la valeur \"incorrectbug\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 61
+#line 39
  await testRunner.AndAsync("Je remplis l\'input \"password_new\" avec la valeur \"bugnew\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 62
+#line 40
  await testRunner.AndAsync("Je remplis l\'input \"password_conf\" avec la valeur \"bugnew\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 63
+#line 41
  await testRunner.AndAsync("Je clique sur le bouton dont le nom est \"action\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 64
+#line 42
  await testRunner.ThenAsync("L\'element dont le XPath est \"/html/body/div[2]/font\" existe", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 65
+#line 43
  await testRunner.AndAsync("le contenu de la balise dont le Xpath est \"/html/body/div[2]/font\" est égal à \"Th" +
                         "e current password is not valid!\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
